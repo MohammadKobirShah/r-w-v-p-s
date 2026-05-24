@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  sshx:
+    build: .
+    container_name: sshx-container
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    ports:
+      - "8080:8080"
+    environment:
+      - TERM=xterm-256color

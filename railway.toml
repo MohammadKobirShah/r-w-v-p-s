@@ -1,0 +1,10 @@
+[build]
+  builder = "DOCKERFILE"
+  dockerfilePath = "Dockerfile"
+
+[deploy]
+  startCommand = "/bin/bash /root/bootstrap.sh"
+  restartPolicyType = "always"
+
+[[services]]
+  name = "vps"
